@@ -6,24 +6,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Latar extends World
-{
-
+public class Latar extends World {
     /**
      * Constructor for objects of class Latar.
      * 
      */
-    public Latar()
-    {    
+    public Latar() { 
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 400, 1); 
         prepare();
     }
-    private void prepare()
-    {
+    private void prepare() {
         Kembali kembali = new Kembali();
         addObject(kembali,50,55);
-        
         
         Player Player = new Player();
         addObject(Player,55,251);
@@ -65,7 +60,7 @@ public class EnemySpawner extends Actor {
         // Create a new enemy and add it to the world
         Enemy enemy = new Enemy();
         getWorld().addObject(enemy, x, y);
+            }
+        }
     }
-}
-}
 }

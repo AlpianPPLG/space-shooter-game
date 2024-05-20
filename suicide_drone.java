@@ -1,11 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 
-public class suicide_drone extends Actor
-{
+public class suicide_drone extends Actor {
     private int vx = 0;
     int framecounter;
-    public suicide_drone(){
+    public suicide_drone() {
         
     }
     
@@ -21,8 +20,7 @@ public class suicide_drone extends Actor
         setLocation(getX()+vx,getY());
     }
     
-    public void act()
-    {   
+    public void act() {
         
         move();
         GreenfootImage image = getImage();  
@@ -32,15 +30,13 @@ public class suicide_drone extends Actor
         
         checkCollision();
     }    
-    private void checkCollision()
-    {
+    private void checkCollision() {
         framecounter++;
         Actor bullet = getOneIntersectingObject(bullet.class);
-        if (framecounter >=1000)
-        {
+        if (framecounter >=1000) {
             getWorld().removeObject(this);
         }
-        else if (isTouching(bullet.class)){
+        else if (isTouching(bullet.class)) {
             getWorld().removeObject(this);
         }
           if (Greenfoot.getRandomNumber(100) < 20) { // Misalnya, 5% kemungkinan perubahan arah setiap frame
@@ -73,4 +69,3 @@ public class EnemySpawner extends Actor {
         }
     }
 }
-
